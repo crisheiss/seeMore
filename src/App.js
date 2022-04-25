@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { SeeMore } from "./components/SeeMore";
+import {
+  WrappedLargeComponent,
+  WrappedShortComponent,
+} from "./components/WrappedComponent";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h3>Large Component</h3>
+        <SeeMore>
+          <WrappedLargeComponent />
+        </SeeMore>
+      </div>
+      <div className="container">
+        <h3>Short Component</h3>
+        <SeeMore>
+          <WrappedShortComponent />
+        </SeeMore>
+      </div>
     </div>
   );
 }
